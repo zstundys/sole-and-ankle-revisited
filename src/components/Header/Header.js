@@ -59,6 +59,8 @@ const MainHeader = styled.div`
   padding: 18px 32px;
   height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
+  overflow-y: hidden;
+  overflow-x: auto;
 
   @media ${BREAKPOINTS.tablet} {
     align-items: center;
@@ -70,8 +72,9 @@ const MainHeader = styled.div`
 
 const Nav = styled.nav`
   display: flex;
-  gap: 48px;
+  gap: clamp(0.5rem, 5vw - 1rem, 3rem);
   margin: 0px 48px;
+  white-space: nowrap;
 
   @media ${BREAKPOINTS.tablet} {
     display: none;
