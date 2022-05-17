@@ -98,7 +98,7 @@ const Side = styled.div`
   }
 `;
 
-const NavLink = styled.a`
+export const NavLink = styled.a`
   font-size: 1.125rem;
   text-transform: uppercase;
   text-decoration: none;

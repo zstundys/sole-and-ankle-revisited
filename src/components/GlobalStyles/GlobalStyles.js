@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components/macro';
+import { createGlobalStyle } from "styled-components/macro";
 
 const GlobalStyles = createGlobalStyle`
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -75,6 +75,48 @@ html {
 
 html, body, #root {
   height: 100%;
+}
+
+[data-reach-dialog-overlay] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(96, 100, 108, 0.8);
+  animation: fade-in 0.4s;
+}
+
+[data-reach-dialog-content] {
+  margin-inline-start: auto;
+  width: 18.75rem;
+  height: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 1rem 2rem 2rem;
+  animation: to-left 0.4s 0.1s cubic-bezier(0.34, 0.32, 0, 1.00) backwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes to-left {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 `;
 
