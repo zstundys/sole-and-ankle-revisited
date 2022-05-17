@@ -77,13 +77,31 @@ html, body, #root {
   height: 100%;
 }
 
+:root {
+  --gray-hue: 220deg;
+  --gray-saturation: 5%;
+  --gray-lightness: 40%;
+
+  --color-white: hsl(0deg 0% 100%);
+  --color-gray-100: hsl(185deg var(--gray-saturation) calc(var(--gray-lightness) + 55%));
+  --color-gray-300: hsl(190deg var(--gray-saturation) calc(var(--gray-lightness) + 40%));
+  --color-gray-500: hsl(196deg calc(var(--gray-saturation) - 1%) calc(var(--gray-lightness) + 20%));
+  --color-gray-700: hsl(var(--gray-hue) var(--gray-saturation) var(--gray-lightness));
+  --color-gray-900: hsl(var(--gray-hue) calc(var(--gray-saturation) - 2%) calc(var(--gray-lightness) - 20%));
+  --color-primary: hsl(340deg 65% 47%);
+  --color-secondary: hsl(240deg 60% 63%);
+  --text-normal: 500;
+  --text-medium: 600;
+  --text-bold: 800;
+}
+
 [data-reach-dialog-overlay] {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(96, 100, 108, 0.8);
+  background: hsl(var(--gray-hue) var(--gray-saturation) var(--gray-lightness) / 80%);
   animation: fade-in 0.4s;
 }
 

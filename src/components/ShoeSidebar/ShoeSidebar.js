@@ -1,6 +1,6 @@
 import styled from "styled-components/macro";
 
-import { BREAKPOINTS, COLORS, WEIGHTS } from "../../constants";
+import { BREAKPOINTS } from "../../constants";
 
 const Sidebar = () => {
   return (
@@ -31,13 +31,13 @@ const Wrapper = styled.aside`
 const Link = styled.a`
   display: block;
   text-decoration: none;
-  font-weight: ${WEIGHTS.medium};
-  color: ${COLORS.gray[900]};
+  font-weight: var(--text-medium);
+  color: var(--color-gray-900);
   line-height: 2;
 `;
 
 const ActiveLink = styled(Link)`
-  color: ${COLORS.primary};
+  color: var(--color-primary);
 `;
 
 export default Sidebar;
